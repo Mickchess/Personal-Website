@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('expiryDate').value = getDate();
 });
 
+var counter = 0;
 
 document.getElementById('addItemForm').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent the default form submission
@@ -13,14 +14,27 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   var expiryDate = document.getElementById('expiryDate').value;
 
   // Pass the values to the addItem function
-  addItem('p', `Name: ${itemName}, Quantity: ${itemQuantity}, Expiry Date: ${expiryDate}`, itemName);
+  for (itemQuantity > 0; itemQuantity--;) {
+  addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
+  addItem('td', itemName, 'itemName' + counter, '#row' + counter); // Add the item name to the new row // Add the item quantity to the new row
+  addItem('td', expiryDate, 'expiryDate' + counter, '#row' + counter); // Add the expiry date to the new row
+  counter++; // Increment the counter
+  }
 });
 
-function addItem(type, content, name) {
+function addItem(type, content, name, rowToInsert) {
   let item = document.createElement(type);
   item.id = name;
   item.innerHTML = content;
-  document.querySelector('.show').appendChild(item); // Append the new item to the dashboard
+  
+  if (rowToInsert == null || rowToInsert == '') {
+    document.querySelector('.table').appendChild(item); // Append the new item to the dashboard
+  }
+  else {
+    document.querySelector(rowToInsert).insertBefore(item, null);
+    console.log(rowToInsert);
+    console.log(document.querySelector(rowToInsert).value);
+  }
   let showDiv = document.querySelector('.show');
   if (showDiv.style.display == '' || showDiv.style.display == 'none') {
     showDiv.style.display = 'flex';

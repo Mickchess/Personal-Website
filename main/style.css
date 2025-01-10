@@ -2,6 +2,9 @@
     --sigma: #6481e0;
 }
 
+body {
+    font-family: 'Rubik', "Funnel Display", sans-serif;
+}
 header {
     display:flex;
     justify-content: space-between;
@@ -46,6 +49,21 @@ h2 {
     font-family: "Funnel display";
     font-size: 1.5em;
 }
+
+th {
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+}
+
+table {
+    border-spacing: 20px;
+}
+
+td, th {
+    padding: 10px;
+}
+
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -118,3 +136,4 @@ input:invalid:not(:placeholder-shown) {
 .show {
     display: none;
 }
+
