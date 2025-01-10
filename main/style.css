@@ -64,6 +64,10 @@ td, th {
     padding: 10px;
 }
 
+td {
+    border-top: 1px solid #ddd;
+}
+
 
 .material-symbols-outlined {
   font-variation-settings:
