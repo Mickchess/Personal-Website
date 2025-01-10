@@ -12,18 +12,21 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   var itemQuantity = document.getElementById('itemQuantity').value;
   var expiryDate = document.getElementById('expiryDate').value;
 
-  //log it
-  console.log("worked")
-
   // Pass the values to the addItem function
   addItem('p', `Name: ${itemName}, Quantity: ${itemQuantity}, Expiry Date: ${expiryDate}`, itemName);
 });
 
 function addItem(type, content, name) {
-  var item = document.createElement(type);
+  let item = document.createElement(type);
   item.id = name;
   item.innerHTML = content;
   document.querySelector('.show').appendChild(item); // Append the new item to the dashboard
+  let showDiv = document.querySelector('.show');
+  if (showDiv.style.display == '' || showDiv.style.display == 'none') {
+    showDiv.style.display = 'flex';
+  }
+
+  
 }
 
 function getDate() {
