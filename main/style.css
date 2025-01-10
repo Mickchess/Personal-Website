@@ -26,7 +26,7 @@ a {
 
 nav a {
     display: block;
-    margin: 0.1em;
+    margin: 0.2em;
 }
 
 nav {
@@ -73,6 +73,7 @@ input {
     font-size: 1rem;
     padding: 0.5rem;
     border: 1px solid #ddd;
+    max-width: 20vw;
 }
 
 .add-item-form, .show {
@@ -83,13 +84,12 @@ input {
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    justify-content: space-around;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
 }
 
 main {
-    max-width: 900px;
-    padding: 1vi;
-    margin: 0 auto;
+    justify-self: center
 }
 
 /* Style for all input elements */
