@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined:wght@700&icon_names=home,add,login" rel="stylesheet" >
+</head>
+<body>
+    
+    <header>
+        <h1>Food Ai</h1>
+        <nav>
+            <a href="index.html"><span class="material-symbols-outlined">home</span></a>
+            <a href="app.html"><span class="material-symbols-outlined">login</span></a>
+        </nav>
+    </header>
+    <div></div>
+    <main>
+        <form id="addItemForm" class="add-item-form">
+            <input type="text" id="itemName" placeholder="Item name" required>
+            <input type="number" id="itemQuantity" placeholder="Quantity" min="1" value="1" required>
+            <input type="date" id="expiryDate" required>
+            <button type="submit" class="add-btn">
+                <span class="material-symbols-outlined">add</span>
+            </button>
+        </form>
+        <div class="show"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
