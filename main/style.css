@@ -38,6 +38,10 @@ nav {
     justify-content: space-evenly;
     padding: 10px;
     margin: 0;
+    a {
+        display: block;
+        margin: 0.2em;
+    }
 }
 
 p {
