@@ -38,10 +38,6 @@ nav {
     justify-content: space-evenly;
     padding: 10px;
     margin: 0;
-    a {
-        display: block;
-        margin: 0.2em;
-    }
 }
 
 p {
@@ -112,6 +108,10 @@ input {
     flex-direction: row;
     justify-content: space-around;
     gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.add-item-form {
+    margin-top: 2rem;
 }
 
 main {

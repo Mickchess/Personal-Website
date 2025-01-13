@@ -18,6 +18,7 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
   addItem('td', itemName, 'itemName' + counter, '#row' + counter); // Add the item name to the new row // Add the item quantity to the new row
   addItem('td', expiryDate, 'expiryDate' + counter, '#row' + counter); // Add the expiry date to the new row
+  addItem('td', daysLeft(expiryDate), 'daysLeft' + counter, '#row' + counter); // Add the days left to the new row
   counter++; // Increment the counter
   }
 });
@@ -44,9 +45,17 @@ function addItem(type, content, name, rowToInsert) {
 }
 
 function getDate() {
-  var date = new Date();
-  var day = String(date.getDate()).padStart(2, '0');
-  var month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-  var year = date.getFullYear();
+  let date = new Date();
+  let day = String(date.getDate()).padStart(2, '0');
+  let month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+  let year = date.getFullYear();
   return `${year}-${month}-${day}`;
+}
+
+function daysLeft(date) {
+  let today = new Date();
+  let expiryDate = new Date(date);
+  let timeDiff = expiryDate - today;
+  let daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
+  return daysLeft;
 }
