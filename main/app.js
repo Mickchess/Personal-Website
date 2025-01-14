@@ -13,6 +13,12 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   let itemQuantity = document.getElementById('itemQuantity').value;
   let expiryDate = document.getElementById('expiryDate').value;
 
+  if (new Date(expiryDate).getDay < new Date().getDay) {
+    alert("This items expiry date has already passed. Please enter a valid expiry date.");
+    return;
+  }
+  let d = new Date();
+  console.log(d.getDay);
   // Pass the values to the addItem function
   for (itemQuantity > 0; itemQuantity--;) {
   addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
@@ -32,9 +38,7 @@ function addItem(type, content, name, rowToInsert) {
     document.querySelector('.table').appendChild(item); // Append the new item to the dashboard
   }
   else {
-    document.querySelector(rowToInsert).insertBefore(item, null);
-    console.log(rowToInsert);
-    console.log(document.querySelector(rowToInsert).value);
+    document.querySelector(rowToInsert).insertBefore(item, null); // Append the new item to the row
   }
   let showDiv = document.querySelector('.show');
   if (showDiv.style.display == '' || showDiv.style.display == 'none') {
