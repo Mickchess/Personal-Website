@@ -9,9 +9,9 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   event.preventDefault(); // Prevent the default form submission
 
   // Get the input values
-  var itemName = document.getElementById('itemName').value;
-  var itemQuantity = document.getElementById('itemQuantity').value;
-  var expiryDate = document.getElementById('expiryDate').value;
+  let itemName = document.getElementById('itemName').value;
+  let itemQuantity = document.getElementById('itemQuantity').value;
+  let expiryDate = document.getElementById('expiryDate').value;
 
   // Pass the values to the addItem function
   for (itemQuantity > 0; itemQuantity--;) {
