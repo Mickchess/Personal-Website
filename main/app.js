@@ -17,8 +17,8 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
     alert("This items expiry date has already passed. Please enter a valid expiry date.");
     return;
   }
-  let d = new Date();
-  console.log(d.getDay);
+  d =  new Date().getDay();
+  console.log(d);
   // Pass the values to the addItem function
   for (itemQuantity > 0; itemQuantity--;) {
   addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard

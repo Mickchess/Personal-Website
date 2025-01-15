@@ -12,6 +12,8 @@ header {
     margin-left: clamp(10px, 10vw, 200px);
     margin-right: clamp(10px, 10vw, 200px);
     height: auto;
+    position: sticky;
+    top: 0;
 }
 
 h1 {
@@ -32,12 +34,24 @@ nav a {
     margin: 0.2em;
 }
 
+nav a .material-symbols-outlined:hover {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48;
+    transform: scale(1.5); /* Scale the icon to 1.5 times its original size */
+    transition: transform 0.3s; /* Smooth transition for the scaling effect */
+    transform-origin: center;
+}
+
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding: 10px;
     margin: 0;
+    position: relative;
 }
 
 p {
@@ -70,11 +84,12 @@ td {
 
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 700,
-  'GRAD' 0,
-  'opsz' 48;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 48; /* Remove the icon from the normal document flow */
+    transition: transform 0.3s; /* Smooth transition for the scaling effect */
 }
 
 button {
@@ -144,4 +159,3 @@ input:invalid:not(:placeholder-shown) {
 .show {
     display: none;
 }
-
