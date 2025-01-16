@@ -17,6 +17,14 @@ header {
     border-bottom: 4px solid #82d9f3;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
 h1 {
     font-size: 2em;
     color: #333;
