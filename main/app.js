@@ -13,18 +13,13 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   let itemQuantity = document.getElementById('itemQuantity').value;
   let expiryDate = document.getElementById('expiryDate').value;
 
-  if (new Date(expiryDate).getDay < new Date().getDay) {
-    alert("This items expiry date has already passed. Please enter a valid expiry date.");
-    return;
-  }
-  d =  new Date().getDay();
-  console.log(d);
   // Pass the values to the addItem function
   for (itemQuantity > 0; itemQuantity--;) {
   addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
   addItem('td', itemName, 'itemName' + counter, '#row' + counter); // Add the item name to the new row // Add the item quantity to the new row
   addItem('td', expiryDate, 'expiryDate' + counter, '#row' + counter); // Add the expiry date to the new row
   addItem('td', daysLeft(expiryDate), 'daysLeft' + counter, '#row' + counter); // Add the days left to the new row
+  addItem('td', '<button onclick="document.getElementById(\'row' + counter + '\').remove();"><span class="material-symbols-outlined">delete</span></button>', 'removeButton' + counter, '#row' + counter); // Add the remove button to the new row
   counter++; // Increment the counter
   }
 });
