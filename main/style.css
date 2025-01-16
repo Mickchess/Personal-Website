@@ -9,11 +9,12 @@ header {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: clamp(10px, 10vw, 200px);
-    margin-right: clamp(10px, 10vw, 200px);
+    padding-left: clamp(10px, 10vw, 200px);
+    padding-right: clamp(10px, 10vw, 200px);
     height: auto;
     position: sticky;
     top: 0;
+    border-bottom: 4px solid #82d9f3;
 }
 
 h1 {
@@ -71,7 +72,7 @@ th {
 }
 
 table {
-    border-spacing: 20px;
+    border-spacing: 10px;
 }
 
 td, th {
@@ -79,7 +80,7 @@ td, th {
 }
 
 td {
-    border-top: 1px solid #ddd;
+    border-top: 2px solid #ddd;
 }
 
 
@@ -130,7 +131,8 @@ input {
 }
 
 main {
-    justify-self: center
+    justify-self: center;
+    margin: 0 20vw;
 }
 
 /* Style for all input elements */
