@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/inferencejs"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add,delete,home,login" >
 </head>
 <body>
@@ -19,7 +20,6 @@
             <a href="app.html"><span class="material-symbols-outlined">login</span></a>
         </nav>
     </header>
-    <div></div>
     <main>
         <form id="addItemForm" class="add-item-form">
             <input type="text" id="itemName" placeholder="Item name" required>
@@ -29,6 +29,10 @@
                 <span class="material-symbols-outlined">add</span>
                 Add Item
             </button>
+        </form>
+        <form id="uploadForm" class="upload-form">
+            <input type="file" id="itemImage" accept="image/*" required>
+            <button type="submit" class="upload-btn">Upload Image</button>
         </form>
         <div class="show">
             <table class="table">
@@ -41,5 +45,6 @@
         </div>
     </main>
     <script src="app.js"></script>
+    <script src="roboflow.js" type="module"></script>
 </body>
 </html>
