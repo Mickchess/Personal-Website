@@ -111,7 +111,8 @@ input {
 }
 
 main {
-    justify-self: center
+    max-width: 60vw;
+    margin: 10px auto;
 }
 
 /* Style for all input elements */
