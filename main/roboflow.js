@@ -11,3 +11,4 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
 
     console.log(predictions); // Log the predictions
 });
+
