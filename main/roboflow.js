@@ -1,4 +1,4 @@
-import { InferenceEngine } from "./node_modules/inferencejs/dist/index.d.ts";
+import { InferenceEngine } from "inferencejs";
 const inferEngine = new InferenceEngine();
 
 document.getElementById('uploadForm').addEventListener('submit', async function(event) {
