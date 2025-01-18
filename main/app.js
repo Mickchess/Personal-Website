@@ -20,7 +20,7 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   addItem('td', expiryDate, 'expiryDate' + counter, '#row' + counter); // Add the expiry date to the new row
   addItem('td', daysLeft(expiryDate), 'daysLeft' + counter, '#row' + counter); // Add the days left to the new row
   addItem('td', '<button onclick="document.getElementById(\'row' + counter + '\').remove();"><span class="material-symbols-outlined">delete</span></button>', 'removeButton' + counter, '#row' + counter); // Add the remove button to the new row
-  counter++; // Increment the counter
+  counter++;//increment the counter
   }
 });
 
