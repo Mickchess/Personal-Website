@@ -1,7 +1,7 @@
 const inferencejs = window.inferencejs
 const inferEngine = new inferencejs.InferenceEngine();
 
-function sugmaballs () {
+async function sugmaballs () {
     const workerId = await inferEngine.startWorker("science-fair-7r503m-ab7q4/2", "2", "rf_AZWB6RdKlqJ8x5gXmulz");
     const image = document.getElementById("itemImage").files[0]; // Get the uploaded file
     const cvimg = new CVImage(image);
