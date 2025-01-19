@@ -1,5 +1,5 @@
 const inferencejs = window.inferencejs
-const inferEngine = new InferenceEngine();
+const inferEngine = new inferencejs.InferenceEngine();
 
 document.getElementById('uploadForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
