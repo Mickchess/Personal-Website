@@ -3,49 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=add,delete,home,login" >
-    <script src="https://cdn.jsdelivr.net/npm/inferencejs"></script>
 </head>
 <body>
     <header>
         <h1>Food Finder</h1>
         <nav>
             <a href="index.html"><span class="material-symbols-outlined">home</span></a>
-            <a href="app.html"><span class="material-symbols-outlined">login</span></a>
         </nav>
     </header>
     <main>
-        <form id="addItemForm" class="add-item-form">
-            <h1>Add Items Here</h1>
+        <form id="loginForm" class="login-form">
+            <h1>Login</h1>
             <div>
-                <input type="text" id="itemName" placeholder="Item name" required>
-                <input type="number" id="itemQuantity" placeholder="Quantity" min="1" value="1" required>
-                <input type="date" id="expiryDate" required>
-                <button type="submit" class="add-btn">
-                    <span class="material-symbols-outlined">add</span>
-                    Add Item
-                </button>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login</button>
             </div>
         </form>
-        <div class="show">
-            <table class="table">
-                <tr>
-                    <th>Item Name</th>
-                    <th>Expiry Date</th>
-                    <th>Days Left</th>
-                </tr>
-            </table>
-        </div>
     </main>
     <footer>
         <p>&copy; 2025 Michael Lam</p>
     </footer>
-    <script src="app.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

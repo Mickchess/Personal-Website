@@ -13,6 +13,10 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   let itemQuantity = document.getElementById('itemQuantity').value;
   let expiryDate = document.getElementById('expiryDate').value;
 
+  if (daysLeft(expiryDate) < 0) {
+    alert('The expiry date cannot be in the past!');
+    return;
+  }
   // Pass the values to the addItem function
   for (itemQuantity > 0; itemQuantity--;) {
   addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
@@ -22,6 +26,8 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   addItem('td', '<button onclick="document.getElementById(\'row' + counter + '\').remove();"><span class="material-symbols-outlined">delete</span></button>', 'removeButton' + counter, '#row' + counter); // Add the remove button to the new row
   counter++;//increment the counter
   }
+  saveRow(itemName, itemQuantity, expiryDate);
+  console.log(itemQuantity)
 });
 
 function addItem(type, content, name, rowToInsert) {
@@ -58,4 +64,14 @@ function daysLeft(date) {
   let daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
   return daysLeft;
 }
-console.log(window)
+
+function saveRow(itemName, itemQuantity, expiryDate) {
+  let row = {
+    itemName: itemName,
+    itemQuantity: itemQuantity,
+    expiryDate: expiryDate
+  };
+  localStorage.setItem(`row${counter}`, JSON.stringify(row));
+  return JSON.parse(localStorage.getItem(`row${counter}`));
+
+}
