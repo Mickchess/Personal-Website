@@ -11,10 +11,6 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
     const reader = new FileReader();
     reader.onload = function(e) {
         var base64String = e.target.result;
-        const imgElement = document.createElement('img');
-        imgElement.src = base64String;
-        imgElement.style.maxWidth = '100%';
-        document.body.appendChild(imgElement);
 
         // Define and call the infer function
         var infer = async function() {
@@ -40,6 +36,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
                     addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
                     addItem('td', predictions[i].class, 'itemName' + counter, '#row' + counter); // Add the item name to the new row
                     addItem('td', Number.parseFloat(predictions[i].confidence).toFixed(2), 'itemConfidence' + counter, '#row' + counter); // Add the item confidence to the new row
+                    addItem('td', '<img src="' + base64String + '" style="max-width: 100px;">', 'itemImage' + counter, '#row' + counter); // Add the item image to the new row
                     addItem('td', '<button onclick="document.getElementById(\'row' + counter + '\').remove();"><span class="material-symbols-outlined">delete</span></button>', 'removeButton' + counter, '#row' + counter); // Add the remove button to the new row
                 }
             };
