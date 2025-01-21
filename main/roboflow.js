@@ -1,4 +1,4 @@
-import { InferenceEngine } from "https://cdn.jsdelivr.net/npm/inferencejs";
+const InferenceEngine = window.inferencejs.InferenceEngine;
 const inferEngine = new InferenceEngine();
 
 document.getElementById('uploadForm').addEventListener('submit', async function(event) {
