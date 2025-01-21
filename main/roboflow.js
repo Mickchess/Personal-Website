@@ -11,8 +11,6 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
     const reader = new FileReader();
     reader.onload = function(e) {
         var base64String = e.target.result;
-        console.log(base64String); // Log the base64 string
-
         const imgElement = document.createElement('img');
         imgElement.src = base64String;
         imgElement.style.maxWidth = '100%';
