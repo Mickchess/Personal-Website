@@ -34,11 +34,14 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
             });
             
             const result = await response.json();
-            console.log(result);
-            
-        };
+            function doResult(result) {
+                const predictions = result.outputs[0].predictions.predictions;
+                console.log(predictions); // Log the predictions
+            };
+            doResult(result);
 
         infer(); // Call the infer function
+        };
     };
     reader.readAsDataURL(image);
 });
