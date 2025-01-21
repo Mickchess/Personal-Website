@@ -38,9 +38,9 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
                 console.log(result) // Log the predictions
             };
             doResult(result);
-
-        infer(); // Call the infer function
         };
+        infer(); // Call the infer function
+        
     };
     reader.readAsDataURL(image);
 });
