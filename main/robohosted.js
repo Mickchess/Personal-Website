@@ -10,7 +10,7 @@ function infer(image) {
     },
     body: JSON.stringify({
         // Add your request payload here
-        bimage
+        base64String
 
     })
 })
