@@ -33,7 +33,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
             
             const result = await response.json();
             function doResult(result) {
-                const predictions = result.outputs[0].predictions;
+                const predictions = result.outputs[0].predictions.predictions;
                 console.log(predictions);
                 console.log(result) // Log the predictions
             };
