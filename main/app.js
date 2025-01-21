@@ -58,4 +58,3 @@ function daysLeft(date) {
   let daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
   return daysLeft;
 }
-console.log(window)
