@@ -19,21 +19,23 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
         document.body.appendChild(imgElement);
 
         // Define and call the infer function
-        var infer = function() {
-            fetch('https://detect.roboflow.com/science-fair-7r503m-ab7q4/2?api_key=11363HqFqpCPCOBH2n0Z?format=json', {
+        var infer = async function() {
+            const response = await fetch('https://detect.roboflow.com/infer/workflows/food-detection-rkdfg/custom-workflow', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ image: base64String })
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
+                body: JSON.stringify({
+                    api_key: 'U5PVZEUpXhY5PMNHobWA',
+                    inputs: {
+                        "image": {"type": "base64", "value": base64String}
+                    }
+                })
             });
+            
+            const result = await response.json();
+            console.log(result);
+            
         };
 
         infer(); // Call the infer function
