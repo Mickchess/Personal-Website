@@ -25,10 +25,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-            // Add your request payload here
-            base64String
-        })
+        body: base64String
     })
     .then(response => response.json())
     .then(data => {
