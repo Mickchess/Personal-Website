@@ -1,5 +1,6 @@
 const inferencejs = window.inferencejs;
 const inferEngine = new inferencejs.InferenceEngine();
+const CVImage = inferencejs.CVImage;
 
 document.getElementById('uploadForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
