@@ -5,6 +5,8 @@ const CVImage = inferencejs.CVImage;
 document.getElementById('uploadForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission
 
+    const image = document.getElementById("itemImage").files[0]; // Get the uploaded file
+
     // Display the uploaded image
     const reader = new FileReader();
     reader.onload = function(e) {
