@@ -1,5 +1,5 @@
 
-function infer(image) {
+function infer(base64String) {
 
     
     
@@ -11,7 +11,6 @@ function infer(image) {
     body: JSON.stringify({
         // Add your request payload here
         base64String
-
     })
 })
 .then(response => response.json())
