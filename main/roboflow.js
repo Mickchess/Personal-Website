@@ -39,7 +39,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
                 for (let i = 0; i < predictions.length; i++) {
                     addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
                     addItem('td', predictions[i].class, 'itemName' + counter, '#row' + counter); // Add the item name to the new row
-                    addItem('td', predictions[i].confidence, 'itemConfidence' + counter, '#row' + counter); // Add the item confidence to the new row
+                    addItem('td', Number.parseFloat(predictions[i].confidence).toFixed(2), 'itemConfidence' + counter, '#row' + counter); // Add the item confidence to the new row
                     addItem('td', '<button onclick="document.getElementById(\'row' + counter + '\').remove();"><span class="material-symbols-outlined">delete</span></button>', 'removeButton' + counter, '#row' + counter); // Add the remove button to the new row
                 }
             };
