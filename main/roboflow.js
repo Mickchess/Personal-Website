@@ -17,22 +17,26 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
         imgElement.src = base64String;
         imgElement.style.maxWidth = '100%';
         document.body.appendChild(imgElement);
+
+        // Define and call the infer function
+        var infer = function() {
+            fetch('https://detect.roboflow.com/science-fair-7r503m-ab7q4/2?api_key=11363HqFqpCPCOBH2n0Z?format=json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ image: base64String })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        };
+
+        infer(); // Call the infer function
     };
     reader.readAsDataURL(image);
-    var infer = function() {
-        fetch('https://detect.roboflow.com/science-fair-7r503m-ab7q4/2?api_key=11363HqFqpCPCOBH2n0Z?format=json', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: base64String
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Success:', data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    })};
-    
 });
