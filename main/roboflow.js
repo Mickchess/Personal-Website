@@ -19,7 +19,8 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
         document.body.appendChild(imgElement);
     };
     reader.readAsDataURL(image);
-    fetch('https://detect.roboflow.com/science-fair-7r503m-ab7q4/2?api_key=11363HqFqpCPCOBH2n0Z?format=json', {
+    infer = function() {
+        fetch('https://detect.roboflow.com/science-fair-7r503m-ab7q4/2?api_key=11363HqFqpCPCOBH2n0Z?format=json', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -35,6 +36,6 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
     })
     .catch((error) => {
         console.error('Error:', error);
-    });
+    })};
     
 });
