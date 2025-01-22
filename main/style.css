@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Rubik', "Funnel Display", sans-serif;
+    overflow-x: hidden;
 }
 header {
     display:flex;
@@ -21,7 +22,7 @@ h1 {
     font-size: 2em;
     color: #333;
     font-family: "Funnel Display";
-    margin: 0;
+    margin: 10px;
 }
 
 a {
@@ -114,7 +115,7 @@ input {
     max-width: 20vw;
 }
 
-.add-item-form, .show {
+form, .show {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
@@ -124,6 +125,8 @@ input {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .add-item-form {
@@ -132,7 +135,7 @@ input {
 
 main {
     justify-self: center;
-    margin: 0 15vw;
+    margin: 2vh 15vw;
 }
 
 /* Style for all input elements */
@@ -175,9 +178,28 @@ footer {
     flex-wrap: nowrap;
 }
 
-section {
+section{
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     margin: 1rem;
+}
+
+.photoslide {
+    width: 100%;
+    background-color: #6fa6d3;
+    gap: 4vmin;
+    display: flex;
+    position: absolute;
+    left: 0;
+    padding: 2vmin;
+}
+
+.photoslide img {
+    width: 40vmin;
+    height: 40vmin;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+
 }
