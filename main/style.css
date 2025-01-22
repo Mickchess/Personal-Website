@@ -5,6 +5,7 @@
 body {
     font-family: 'Rubik', "Funnel Display", sans-serif;
     overflow-x: hidden;
+    margin: 0;
 }
 header {
     display:flex;
@@ -92,6 +93,7 @@ td {
     'GRAD' 0,
     'opsz' 48; /* Remove the icon from the normal document flow */
     transition: transform 0.3s; /* Smooth transition for the scaling effect */
+    font-size: 40px;
 }
 
 button {
@@ -202,4 +204,8 @@ section{
     object-fit: cover;
     object-position: center;
 
+}
+
+.login-form {
+    gap: 1rem;
 }
