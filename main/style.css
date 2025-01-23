@@ -37,12 +37,12 @@ nav a {
     margin: 0.2em;
 }
 
-nav a .material-symbols-outlined:hover {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 700,
-    'GRAD' 0,
-    'opsz' 48;
+nav a span {
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+nav a:hover .material-symbols-outlined{
     transform: scale(1.5); /* Scale the icon to 1.5 times its original size */
     transition: transform 0.3s; /* Smooth transition for the scaling effect */
     transform-origin: center;
@@ -93,7 +93,10 @@ td {
     'GRAD' 0,
     'opsz' 48; /* Remove the icon from the normal document flow */
     transition: transform 0.3s; /* Smooth transition for the scaling effect */
-    font-size: 40px;
+}
+
+a .material-symbols-outlined {
+    font-size: 1.5em;
 }
 
 button {
@@ -189,7 +192,6 @@ section{
 
 .photoslide {
     width: 100%;
-    background-color: #6fa6d3;
     gap: 4vmin;
     display: flex;
     position: absolute;
@@ -209,3 +211,4 @@ section{
 .login-form {
     gap: 1rem;
 }
+

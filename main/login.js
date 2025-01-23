@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {  
 
-    if (localStorage.getItem('username') == null) {
-        localStorage.setItem('username', 'mryuill');
-        localStorage.setItem('password', 'pizza');
-    }
+        localStorage.setItem('username', 'Cheese');
+        localStorage.setItem('password', 'Pizza');
+
 });
 
 
@@ -21,5 +20,11 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     }
     else {
         alert('Invalid username or password!');
+        document.getElementById('username').value = '';
+        document.getElementById('password').value = '';
+        console.log(localStorage.getItem('username'));
+        console.log(localStorage.getItem('password'));
+        console.log(username);
+        console.log(password);
     }
 });
