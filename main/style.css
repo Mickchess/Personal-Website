@@ -183,32 +183,30 @@ footer {
     flex-wrap: nowrap;
 }
 
-section{
+section {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     margin: 1rem;
 }
 
-.photoslide {
+.slide {
     width: 100%;
     gap: 4vmin;
     display: flex;
-    position: absolute;
-    left: 0;
     padding: 2vmin;
-}
-
-.photoslide img {
-    width: 40vmin;
-    height: 40vmin;
-    border-radius: 8px;
-    object-fit: cover;
-    object-position: center;
-
+    flex-direction: row;
 }
 
 .login-form {
     gap: 1rem;
+}
+
+.part {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+
 }
 
