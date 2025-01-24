@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {  
-
-        localStorage.setItem('username', 'Cheese');
-        localStorage.setItem('password', 'Pizza');
-
+    localStorage.setItem('username', 'Cheese');
+    localStorage.setItem('password', 'Pizza');
+    if (localStorage.getItem('signedIn') == null) {
+        localStorage.setItem('signedIn', 'false')
+    }
 });
 
-
-
+var signedIn = localStorage.getItem('signedIn');
 
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
@@ -17,6 +17,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     
     if (username == localStorage.getItem('username') && password == localStorage.getItem('password')) {
         window.location.href = 'app.html';
+        signedIn = true;
     }
     else {
         alert('Invalid username or password!');
@@ -26,5 +27,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         console.log(localStorage.getItem('password'));
         console.log(username);
         console.log(password);
+        signedIn = false;
     }
 });
