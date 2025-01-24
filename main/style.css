@@ -60,6 +60,8 @@ nav {
 p {
     font-family: Rubik;
     font-size: 20px;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 h2 {
@@ -140,7 +142,7 @@ form, .show {
 
 main {
     justify-self: center;
-    margin: 2vh 15vw;
+    margin: 2vh 20vw;
 }
 
 /* Style for all input elements */
@@ -193,11 +195,9 @@ section {
 .slide {
     height: 100%;
     display: flex;
-    padding: 2vmin;
     flex-direction: row;
-    justify-content: center;
-    gap: 4vw;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 }
 
 .login-form {
@@ -210,7 +210,7 @@ section {
     padding: 0.5rem;
     margin: 0.5rem;
     height: auto;
-    width: auto;
+    width: 100%;
 }
 
 .part h2 {
