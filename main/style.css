@@ -4,7 +4,6 @@
 
 body {
     font-family: 'Rubik', "Funnel Display", sans-serif;
-    overflow-x: hidden;
     margin: 0;
     padding-top: 8vh;
     background-color: #e8f0f7;
@@ -21,11 +20,11 @@ body {
 footer, header {
     position: fixed;
     width: 100%;
-    background-color: #13161a;
 }
 header {
     top: 0;
-    border-bottom: 4px solid #82d9f3;
+    background-color: #13161a;
+    color: white;
 }
 
 footer {
@@ -34,8 +33,7 @@ footer {
 }
 
 h1 {
-    font-size: 2em;
-    color: #333;
+    font-size: 1.8em;
     font-family: "Funnel Display";
     margin: 10px;
 }
@@ -49,17 +47,22 @@ a {
 nav a {
     display: block;
     margin: 0.2em;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-nav a span {
+span {
     vertical-align: middle;
     font-size: 1.5em;
 }
 
-nav a:hover .material-symbols-outlined{
-    transform: scale(1.5); /* Scale the icon to 1.5 times its original size */
-    transition: transform 0.3s; /* Smooth transition for the scaling effect */
-    transform-origin: center;
+nav a:hover {
+    .material-symbols-outlined{
+        transform: scale(1.5); /* Scale the icon to 1.5 times its original size */
+        transition: transform 0.3s; /* Smooth transition for the scaling effect */
+        transform-origin: center;
+    }
+
+    color: white;
 }
 
 nav {
@@ -126,7 +129,7 @@ button {
     justify-content: center;
     transition: background-color 0.2s;
     font-family: Rubik;
-    background-color: var(--sigma);
+    background-color: #80b5fb;
 }
 
 input {
@@ -185,6 +188,7 @@ input:invalid:not(:placeholder-shown) {
 
 .show {
     display: none;
+    background-color: white;
 }
 
 
@@ -192,7 +196,7 @@ input:invalid:not(:placeholder-shown) {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: clamp(0.5rem, 2vw, 1.5rem);
+    gap: clamp(0.25rem, 1.5vw, 1rem);
     flex-wrap: nowrap;
 }
 
@@ -201,6 +205,7 @@ section {
     box-shadow: 0 2px 4px rgba(25, 9, 9, 0.1);
     padding: 0.5rem;
     margin: 1rem;
+    background-color: white;
 }
 
 .slide {
@@ -218,16 +223,17 @@ section {
     
 }
 .login-form {
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .part {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 0.5rem;
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     height: auto;
     width: 100%;
+    background-color: white;
 }
 
 .part h2 {
@@ -243,3 +249,13 @@ section {
     padding: 0.5rem;
     margin: 0.5rem;
 }
+
+
+#middle {
+    margin: 0 0 1rem 0;
+}
+
+#Feedback:hover {
+    color: black;
+}
+
