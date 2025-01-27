@@ -12,6 +12,7 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   let itemName = document.getElementById('itemName').value;
   let itemQuantity = document.getElementById('itemQuantity').value;
   let expiryDate = document.getElementById('expiryDate').value;
+  console.log(expiryDate)
 
   if (daysLeft(expiryDate) < 0) {
     alert('The expiry date cannot be in the past!');
@@ -27,7 +28,6 @@ document.getElementById('addItemForm').addEventListener('submit', function(event
   counter++;//increment the counter
   }
   saveRow(itemName, itemQuantity, expiryDate);
-  console.log(itemQuantity)
 });
 
 function addItem(type, content, name, rowToInsert) {
@@ -50,11 +50,13 @@ function addItem(type, content, name, rowToInsert) {
 }
 
 function getDate() {
-  let date = new Date();
+  var date = new Date();
   let day = String(date.getDate()).padStart(2, '0');
   let month = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
   let year = date.getFullYear();
+  console.log(date);
   return `${year}-${month}-${day}`;
+
 }
 
 function daysLeft(date) {
@@ -62,8 +64,8 @@ function daysLeft(date) {
   let expiryDate = new Date(date);
   let timeDiff = expiryDate - today;
   let daysLeft = Math.ceil(timeDiff / (1000 * 3600 * 24));
-  return daysLeft;
-}
+  console.log(expiryDate)
+  return daysLeft;}
 
 function saveRow(itemName, itemQuantity, expiryDate) {
   let row = {
@@ -74,4 +76,9 @@ function saveRow(itemName, itemQuantity, expiryDate) {
   localStorage.setItem(`row${counter}`, JSON.stringify(row));
   return JSON.parse(localStorage.getItem(`row${counter}`));
 
+}
+
+function signOut() {
+  localStorage.setItem('signedIn', 'false');
+  location.href = 'index.html';
 }
