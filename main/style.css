@@ -1,20 +1,35 @@
-:root {
-    --sigma: #6481e0;
+* {
+    box-sizing: border-box;
 }
 
 body {
     font-family: 'Rubik', "Funnel Display", sans-serif;
+    margin: 0;
+    padding-top: 8vh;
+    background-color: #e8f0f7;
+
 }
-header {
-    display:flex;
+.header_content, .footer_content {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: clamp(10px, 10vw, 200px);
     padding-right: clamp(10px, 10vw, 200px);
-    height: auto;
-    position: sticky;
+}
+
+footer, header {
+    position: fixed;
+    width: 100%;
+}
+header {
     top: 0;
-    border-bottom: 4px solid #82d9f3;
+    background-color: #13161a;
+    color: white;
+}
+
+footer {
+    bottom: 0;
+    border-top: 4px solid #82d9f3;
 }
 
 footer {
@@ -26,10 +41,9 @@ footer {
 }
 
 h1 {
-    font-size: 2em;
-    color: #333;
+    font-size: 1.8em;
     font-family: "Funnel Display";
-    margin: 0;
+    margin: 10px;
 }
 
 a {
@@ -41,17 +55,22 @@ a {
 nav a {
     display: block;
     margin: 0.2em;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-nav a .material-symbols-outlined:hover {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 700,
-    'GRAD' 0,
-    'opsz' 48;
-    transform: scale(1.5); /* Scale the icon to 1.5 times its original size */
-    transition: transform 0.3s; /* Smooth transition for the scaling effect */
-    transform-origin: center;
+span {
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    .material-symbols-outlined{
+        transform: scale(1.5); /* Scale the icon to 1.5 times its original size */
+        transition: transform 0.3s; /* Smooth transition for the scaling effect */
+        transform-origin: center;
+    }
+
+    color: white;
 }
 
 nav {
@@ -65,12 +84,15 @@ nav {
 
 p {
     font-family: Rubik;
-    font-size: 1.2em;
+    font-size: 20px;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 h2 {
     font-family: "Funnel display";
     font-size: 1.5em;
+    margin: 0.5rem;
 }
 
 th {
@@ -101,6 +123,10 @@ td {
     transition: transform 0.3s; /* Smooth transition for the scaling effect */
 }
 
+a .material-symbols-outlined {
+    font-size: 1.5em;
+}
+
 button {
     cursor: pointer;
     border: none;
@@ -111,7 +137,7 @@ button {
     justify-content: center;
     transition: background-color 0.2s;
     font-family: Rubik;
-    background-color: var(--sigma);
+    background-color: #80b5fb;
 }
 
 input {
@@ -122,16 +148,18 @@ input {
     max-width: 20vw;
 }
 
-.add-item-form, .show {
+form, .show {
     background: white;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    gap: clamp(0.5rem, 2vw, 1.5rem);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
 .add-item-form {
@@ -140,7 +168,7 @@ input {
 
 main {
     justify-self: center;
-    margin: 0 20vw;
+    margin: 2vh 20vw;
 }
 
 /* Style for all input elements */
@@ -157,7 +185,7 @@ input[type="date"] {
   /* Change background color on focus */
   input[type="date"]:focus {
     background-color: #e9e9e9;
-    border-color: #007BFF;
+    border-color: #4ca3ff;
     outline: none;
   }
   
@@ -168,4 +196,74 @@ input:invalid:not(:placeholder-shown) {
 
 .show {
     display: none;
+    background-color: white;
 }
+
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: clamp(0.25rem, 1.5vw, 1rem);
+    flex-wrap: nowrap;
+}
+
+section {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(25, 9, 9, 0.1);
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: white;
+}
+
+.slide {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 900px) {
+    .slide {
+        flex-direction: column;
+    }
+    
+}
+.login-form {
+    gap: 0.5rem;
+}
+
+.part {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin: 0 1rem 1rem 1rem;
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+
+.part h2 {
+    text-align: center;
+    margin: 0.25rem;
+}
+
+.part p {
+    font-size: 1rem;
+}
+
+#Feedback {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+
+#middle {
+    margin: 0 0 1rem 0;
+}
+
+#Feedback:hover {
+    color: black;
+}
+

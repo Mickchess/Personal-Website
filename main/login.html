@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,42 +20,25 @@
         <div class="header_content">
             <h1>Food Finder</h1>
             <nav>
-                <a href="index.html"><span class="material-symbols-outlined">home</span><span><b> Home</b></span></a>
-                <a href="login.html" onclick="signOut()"><span class="material-symbols-outlined">logout</span><span><b> Logout</b></span></a>
+            <a href="index.html"><span class="material-symbols-outlined">home</span><span><b> Home</b></span></a>
             </nav>
         </div>
     </header>
     <main>
-        <form id="addItemForm" class="add-item-form">
-            <h1>Add Items Here</h1>
-            <div class="form-container">
-                <input type="text" id="itemName" placeholder="Item name" required>
-                <input type="number" id="itemQuantity" placeholder="Quantity" min="1" value="1" required>
-                <input type="date" id="expiryDate" required>
-                <button type="submit" class="add-btn">
-                    <span class="material-symbols-outlined">add</span>
-                    Add Item
-                </button>
-            </div>
+        <form id="loginForm" class="login-form">
+            <h1>Login</h1>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" class="login-btn">Login</button>
+                <p style="font-size: 1em; color:grey">Hint: Cheese Pizza</p>
         </form>
-        <div class="show">
-            <table class="table">
-                <tr>
-                    <th>Item Name</th>
-                    <th>Confidence</th>
-                    <th>Image</th>
-                </tr>
-            </table>
-        </div>
     </main>
-    <script src="app.js"></script>
-    <script src="./roboflow.js"></script>
     <footer>
         <div class="footer_content">
             <p>&copy; 2025 Michael Lam</p>
             <a id="Feedback" href="mailto:2004454@learn.vsb.bc.ca?subject="><span class="material-symbols-outlined">mail</span><span> Send Feedback</span></a>
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
