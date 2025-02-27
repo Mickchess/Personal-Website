@@ -20,7 +20,6 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ string: base64String })
-                console.log(base64String);
             });
                    
             const result = await response.json();
