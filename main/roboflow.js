@@ -42,4 +42,5 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
         
     };
     reader.readAsDataURL(image);
+    console.log("ran");
 });
