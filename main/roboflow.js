@@ -14,17 +14,12 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
 
         // Define and call the infer function
         var infer = async function() {
-            const response = await fetch('https://detect.roboflow.com/infer/workflows/free-trial-lol/custom-workflow', {
+            const response = await fetch('https://detect.roboflow.com/infer/workflows/free-trial-lol/foodfinder?api_key=FOtktWh0YseeBvn4A4WJ', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({
-                    api_key: 'FOtktWh0YseeBvn4A4WJ',
-                    inputs: {
-                        "image": {"type": "url", "value": "IMAGE_URL"}
-                    }
-                })
+                body: JSON.stringify({ string: base64String })
             });
                    
             const result = await response.json();
