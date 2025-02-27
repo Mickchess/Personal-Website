@@ -32,6 +32,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
                 const predictions = result.outputs[0].predictions.predictions;
                 console.log(predictions);
                 console.log(result);
+                console.log("hello");
                 for (let i = 0; i < predictions.length; i++) {
                     addItem('tr', '', 'row' + counter, '.table'); // Add a new row to the dashboard
                     addItem('td', predictions[i].class, 'itemName' + counter, '#row' + counter); // Add the item name to the new row
