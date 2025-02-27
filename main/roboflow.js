@@ -27,7 +27,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
                 })
             });
             
-            const result = await response.json();
+            const result = await response.json.parse();
             function doResult(result) {
                 const predictions = result.outputs[0].model_predictions.predictions;
                 console.log(predictions);
