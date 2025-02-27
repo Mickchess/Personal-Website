@@ -28,6 +28,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
             }
         }
 
+        
         // Define and call the infer function
         const infer = async function() {
             try {
