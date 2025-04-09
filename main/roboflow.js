@@ -32,7 +32,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
         // Define and call the infer function
         const infer = async function() {
             try {
-                const response = await fetch('https://detect.roboflow.com/infer/workflows/free-trial-lol/foodfinder', {
+                const response = await fetch('https://serverless.roboflow.com/infer/workflows/food-detection-rkdfg/custom-workflow-2', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
