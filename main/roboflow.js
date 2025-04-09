@@ -38,7 +38,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        api_key: 'FOtktWh0YseeBvn4A4WJ',
+                        api_key: 'U5PVZEUpXhY5PMNHobWA',
                         inputs: {
                             "image": {"type": "base64", "value": base64String}
                         }
