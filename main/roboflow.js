@@ -8,7 +8,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
     const image = document.getElementById("itemImage").files[0]; // Get the uploaded file
 
     // Convert the image to a base64 string and display it
-    const reader = new FileReader();
+    const reader = new FileReader(); // Create a new FileReader object
     reader.onload = function(e) {
         const base64String = e.target.result;
 
